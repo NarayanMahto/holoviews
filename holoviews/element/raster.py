@@ -249,6 +249,7 @@ class Image(Dataset, Raster, SheetCoordinateSystem):
             or (isinstance(data, (list, tuple)) and not data)
             or (isinstance(data, np.ndarray) and data.size == 0)):
             data = np.zeros((0, 0))
+            bounds = 0
             if not xdensity: xdensity = 1
             if not ydensity: ydensity = 1
 
